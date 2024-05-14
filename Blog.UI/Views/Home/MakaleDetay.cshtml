@@ -1,0 +1,30 @@
+﻿@using Blog.Application.Models.VMs.MakaleVMs;
+
+@model MakaleDetayVM
+
+<table>
+    <tr>
+        <td></td>
+        <td><h2>@Model.Baslik</h2></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><img src="~/HaberResimleri/@Model.ResimYolu" width="300" height="240" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>@Model.Detay</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>@Model.KonuAdi</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>@Model.EklemeTarih</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>@Model.GoruntulenmeSayisi</td>
+    </tr>
+</table>

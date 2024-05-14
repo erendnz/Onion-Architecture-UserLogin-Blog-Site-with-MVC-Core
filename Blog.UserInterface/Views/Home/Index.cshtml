@@ -1,0 +1,14 @@
+﻿@using Blog.Application.Models.VMs.MakaleVMs;
+@model IEnumerable<MakaleVM>
+
+<table class="table table-striped">
+    @foreach (var makale in Model)
+    {
+        <tr>
+            <td><img src="~/HaberResimleri/@makale.ResimYolu" width="120" height="80" /></td>
+            <td>@makale.Baslik</td>
+            <td>@makale.EklemeTarih</td>
+            <td><a asp-action="MakaleDetay" asp-route-id="@makale.MakaleId">Detay</a></td>
+        </tr>
+    }
+</table>

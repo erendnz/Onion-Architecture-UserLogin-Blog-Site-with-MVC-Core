@@ -1,0 +1,23 @@
+﻿@using Blog.UI.Areas.UyePanel.Models;
+
+@model MakaleEkleVM
+
+<form asp-action="MakaleEkle" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Baslik" class="form-label">Makale Başlığı</label>
+        <input asp-for="Baslik" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Detay" class="form-label">Makale Detayı</label>
+        <textarea asp-for="Detay" class="form-control" cols="60" rows="6"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="KonuId" class="form-label">Konu Seçiniz</label>
+        <select asp-for="KonuId" class="form-control" asp-items="Model.Konular"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="ResimDosyasi" class="form-label">Resim Seçiniz</label>
+        <input asp-for="ResimDosyasi" type="file" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Makale Ekle</button>
+</form>

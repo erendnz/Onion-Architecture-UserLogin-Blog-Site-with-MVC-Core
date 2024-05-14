@@ -1,0 +1,15 @@
+﻿@using Blog.Application.Models.DTOs.KonuDTOs;
+@model IEnumerable<KonuDTO>
+
+<a asp-area="AdminPanel" asp-controller="Konu" asp-action="KonuEkle">Yeni Konu Ekle</a>
+
+<br />
+<table>
+    @foreach (var konu in Model)
+    {
+        <tr>
+            <td>@konu.KonuId</td>
+            <td>@konu.KonuAdi</td>
+        </tr>
+    }
+</table>

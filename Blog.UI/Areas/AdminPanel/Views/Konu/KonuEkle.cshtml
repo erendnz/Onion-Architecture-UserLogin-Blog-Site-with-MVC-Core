@@ -1,0 +1,13 @@
+﻿@using Blog.Application.Models.DTOs.KonuDTOs;
+@using Blog.UI.Areas.AdminPanel.Models;
+
+@model KonuEkleDTO
+
+<form asp-action="KonuEkle" method="post">
+    <div class="form-group">
+        <label asp-for="KonuAdi" class="form-label">Konu Adı</label>
+        <input asp-for="KonuAdi" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Konu Ekle</button>
+</form>
+@Html.ValidationSummary()

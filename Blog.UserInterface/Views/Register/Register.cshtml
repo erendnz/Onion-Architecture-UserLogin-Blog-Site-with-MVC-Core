@@ -1,0 +1,42 @@
+﻿@using Blog.Application.Models.DTOs.UyeDTOs;
+
+@model UyeKayitDTO
+
+<form asp-action="Register">
+    <table class="table">
+        <tr>
+            <td><label asp-for="Ad" class="form-control"></label></td>
+            <td><input asp-for="Ad" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Soyad" class="form-control"></label></td>
+            <td><input asp-for="Soyad" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="UserName" class="form-control"></label></td>
+            <td><input asp-for="UserName" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email" class="form-control"></label></td>
+            <td><input asp-for="Email" type="email" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password" class="form-control"></label></td>
+            <td><input asp-for="Password" type="password" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="ConfirmPassword" class="form-control"></label></td>
+            <td><input asp-for="ConfirmPassword" type="password" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Kayıt Ol" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div asp-validation-summary="All"></div>
+            </td>
+        </tr>
+    </table>
+</form>

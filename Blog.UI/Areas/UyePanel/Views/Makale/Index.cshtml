@@ -1,0 +1,30 @@
+﻿@using Blog.Application.Models.VMs.MakaleVMs;
+@model IEnumerable<AdminMakaleVM>
+
+<a asp-area="UyePanel" asp-controller="Makale" asp-action="MakaleEkle">Yeni Makale Ekle</a>
+
+<br />
+<table>
+    @foreach (var makale in Model)
+    {
+        <tr>
+            <td>@makale.Baslik</td>
+            <td>
+                @if (makale.KayitDurumu == Blog.Domain.Enums.KayitDurumu.Aktif)
+                {
+                    <form method="post" asp-action="MakaleSil">
+                        <input name="ID" type="hidden" value="@makale.MakaleId" />
+                        <input type="submit" value="Pasiflestir">
+                    </form>
+                }
+                @if (makale.KayitDurumu == Blog.Domain.Enums.KayitDurumu.Pasif)
+                {
+                    <form method="post" asp-action="MakaleyiAktifEt">
+                        <input name="ID" type="hidden" value="@makale.MakaleId" />
+                        <input type="submit" value="Aktiflestir">
+                    </form>
+                }
+            </td>
+        </tr>
+    }
+</table>
